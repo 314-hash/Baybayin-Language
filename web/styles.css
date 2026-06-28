@@ -55,11 +55,13 @@ body {
     gap: 12px;
 }
 
-.logo-icon {
-    font-size: 32px;
-    font-weight: 800;
-    color: var(--accent-cyan);
-    text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+.logo-img {
+    height: 38px;
+    width: 38px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.2);
 }
 
 .logo-text h1 {

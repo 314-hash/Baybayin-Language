@@ -1,5 +1,9 @@
 # BBL (Baybayin Language) Compiler & Transpiler
 
+<p align="center">
+  <img src="web/logo.jpg" alt="BBL Logo & Cover" width="350px" style="border-radius: 12px;" />
+</p>
+
 BBL is a Tagalog-inspired, statically typed programming language designed to showcase clean compilation pipelines. It transpiles into multiple targets including **Python**, **JavaScript**, and **Solidity**.
 
 > 📖 **Looking for a user guide?** Read the detailed [BBL AI Agent & User Guide](file:///C:/Users/janla/baybayin-language/docs/AGENT_GUIDE.md) to learn BBL syntax, CLI commands, and the AI agent system!
