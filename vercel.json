@@ -9,6 +9,7 @@
     { "src": "/api/ai", "dest": "api/ai.py" },
     { "src": "/styles.css", "dest": "web/styles.css" },
     { "src": "/app.js", "dest": "web/app.js" },
-    { "src": "/(.*)", "dest": "web/index.html" }
+    { "src": "/logo.jpg", "dest": "web/logo.jpg" },
+    { "src": "/", "dest": "web/index.html" }
   ]
 }
