@@ -1,0 +1,22 @@
+// Isang demo program sa Baybayin Language (BBL)
+
+tungkulin kalkulahinDoble(numero: buo): buo {
+    ibalik numero * 2
+}
+
+ipakita("Nagsisimula ang pagtakbo sa VM...")
+
+itakda grado: buo = 85
+itakda pangalan: teksto = "Juan"
+
+ipakita("Pangalan ng Estudyante: " + pangalan)
+ipakita("Orihinal na Grado: " + grado)
+
+itakda dobleng_grado = kalkulahinDoble(grado)
+ipakita("Dobleng Grado: " + dobleng_grado)
+
+kung (grado >= 75) {
+    ipakita("Desisyon: PASADO SA PAGSUSULIT!")
+} kundi {
+    ipakita("Desisyon: BAGSAK.")
+}
