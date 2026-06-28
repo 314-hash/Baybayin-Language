@@ -92,6 +92,35 @@ body {
     box-shadow: 0 0 8px var(--accent-green);
 }
 
+.header-separator {
+    color: rgba(255, 255, 255, 0.15);
+    margin: 0 4px;
+    user-select: none;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.github-link:hover {
+    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.github-icon {
+    flex-shrink: 0;
+}
+
 /* Workspace */
 .workspace {
     flex: 1;
