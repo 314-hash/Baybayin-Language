@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/*.py", "use": "@vercel/python" },
+    { "src": "web/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/compile", "dest": "api/compile.py" },
+    { "src": "/api/ai", "dest": "api/ai.py" },
+    { "src": "/styles.css", "dest": "web/styles.css" },
+    { "src": "/app.js", "dest": "web/app.js" },
+    { "src": "/(.*)", "dest": "web/index.html" }
+  ]
+}
