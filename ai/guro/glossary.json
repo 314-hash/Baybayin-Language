@@ -1,0 +1,30 @@
+{
+  "variable": {
+    "tagalog": "imbakan / variable",
+    "description": "Isang lalagyan o imbakan sa memorya na may pangalan kung saan maaaring mag-imbak ng datos (tulad ng numero o teksto) na pwedeng mabago habang tumatakbo ang programa. Sa BBL, gumagamit tayo ng 'itakda message = ...' para rito."
+  },
+  "loop": {
+    "tagalog": "pag-ulit / loop",
+    "description": "Isang istruktura sa coding na nagpapahintulot sa pagtakbo ng isang bloke ng code nang paulit-ulit hanggang sa maabot ang isang tiyak na kondisyon. Sa BBL, gumagamit tayo ng 'habang' o 'ulit' para mag-loop."
+  },
+  "function": {
+    "tagalog": "tungkulin / function",
+    "description": "Isang bloke ng mga code na may sariling pangalan at partikular na tungkulin. Maaari itong tawagin nang paulit-ulit sa iba't ibang parte ng programa. Sa BBL, dinedeklara ito gamit ang keyword na 'tungkulin'."
+  },
+  "contract": {
+    "tagalog": "kontrata / smart contract",
+    "description": "Isang klase (class) o blueprint na naglalaman ng mga variable at tungkulin na gumagana sa isang blockchain ecosystem. Ito ang namamahala sa logic at transaksyon ng isang Web3 application. Sa BBL, gumagamit tayo ng keyword na 'kontrata'."
+  },
+  "compile": {
+    "tagalog": "pagsasalin / compilation",
+    "description": "Ang proseso ng pag-convert ng source code (tulad ng .bbl) patungo sa mababang antas ng bytecode (.bbv) upang ito ay maipatupad o maisagawa ng Virtual Machine."
+  },
+  "transpile": {
+    "tagalog": "pag-transpile / transpilation",
+    "description": "Ang pagsasalin ng source code ng isang programming language patungo sa isa pang katulad na antas na wika (tulad ng pagsasalin ng BBL patungo sa Python, JavaScript, o Solidity)."
+  },
+  "type": {
+    "tagalog": "uri ng datos / type",
+    "description": "Klasipikasyon ng datos (tulad ng 'buo' para sa integer, 'teksto' para sa string, o 'alamat' para sa blockchain address) na nagtatakda kung anong uri ng impormasyon ang pwedeng ilagay sa variable."
+  }
+}

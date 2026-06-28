@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBL Playground & AI Dashboard</title>
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-area">
+                <span class="logo-icon">ᜊ</span>
+                <div class="logo-text">
+                    <h1>Baybayin Language</h1>
+                    <span class="tagline">Playground & AI Multi-Agent Dashboard</span>
+                </div>
+            </div>
+            <div class="header-status">
+                <div class="status-indicator online"></div>
+                <span>BBL Compiler v0.1.0</span>
+            </div>
+        </header>
+
+        <!-- Main Workspace -->
+        <main class="workspace">
+            <!-- Left Pane: Editor -->
+            <section class="pane editor-pane">
+                <div class="pane-header">
+                    <h2>BBL Code Editor</h2>
+                    <div class="actions">
+                        <button id="btn-compile" class="btn btn-primary">
+                            <span class="btn-icon">⚡</span> Transpile Code
+                        </button>
+                    </div>
+                </div>
+                <div class="editor-wrapper">
+                    <textarea id="code-editor" spellcheck="false" placeholder="// Isulat ang iyong BBL code dito...
+kontrata Pagbati {
+    itakda mensahe: teksto = 'Kamusta mula sa BBL!'
+    
+    tungkulin kuninMensahe() -> teksto {
+        ibalik mensahe
+    }
+}"></textarea>
+                </div>
+            </section>
+
+            <!-- Middle Pane: Compiled Output & AST -->
+            <section class="pane output-pane">
+                <div class="pane-header">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-target="python">Python</button>
+                        <button class="tab-btn" data-target="javascript">JavaScript</button>
+                        <button class="tab-btn" data-target="solidity">Solidity</button>
+                        <button class="tab-btn" data-target="ast">AST Layout</button>
+                    </div>
+                </div>
+                <div class="tab-content-wrapper">
+                    <div id="tab-python" class="tab-content active">
+                        <pre><code id="output-python" class="language-python"># Dito lalabas ang Python transpile...</code></pre>
+                    </div>
+                    <div id="tab-javascript" class="tab-content">
+                        <pre><code id="output-javascript" class="language-javascript">// Dito lalabas ang JavaScript transpile...</code></pre>
+                    </div>
+                    <div id="tab-solidity" class="tab-content">
+                        <pre><code id="output-solidity" class="language-solidity">// Dito lalabas ang Solidity transpile...</code></pre>
+                    </div>
+                    <div id="tab-ast" class="tab-content">
+                        <pre><code id="output-ast">JSON representation of AST...</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Pane: AI Assistant & Agents Control Center -->
+            <section class="pane ai-pane">
+                <div class="pane-header agent-pane-header">
+                    <h2>BBL AI Agents</h2>
+                    <div class="agent-tabs">
+                        <button class="agent-tab active" data-agent="orchestrator" title="Orchestrator Agent">Orchestrator</button>
+                        <button class="agent-tab" data-agent="writer" title="Code Writer Agent">Writer</button>
+                        <button class="agent-tab" data-agent="auditor" title="Security & Audit Agent">Auditor</button>
+                        <button class="agent-tab" data-agent="explainer" title="AST & Code Explainer">Explainer</button>
+                        <button class="agent-tab" data-agent="guro" title="Tagalog Coding Tutor & Historian">Guro</button>
+                    </div>
+                </div>
+
+                <!-- Agent Flow Visualizer -->
+                <div class="agent-visualizer">
+                    <div class="flow-node active" id="node-user">User</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-node" id="node-orchestrator">Orchestrator</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-node" id="node-subagent">Sub-Agent</div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-node" id="node-browser">Browser</div>
+                </div>
+
+                <div class="ai-chat-wrapper">
+                    <div id="chat-messages" class="chat-messages">
+                        <div class="msg system">
+                            <strong>AI Agent:</strong> Maligayang pagdating! Maaari kitang tulungan mag-explain, mag-audit, o magsulat ng BBL code gamit ang ating Multi-Agent system.
+                        </div>
+                    </div>
+                    <div class="quick-prompts">
+                        <button class="btn btn-secondary btn-sm" id="btn-quick-explain">Explain Current Code</button>
+                        <button class="btn btn-secondary btn-sm" id="btn-quick-audit">Audit Current Code</button>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="chat-input" placeholder="Magtanong tungkol sa BBL..." />
+                        <button id="btn-chat-send" class="btn btn-primary btn-sm">Ipadala</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer / Logs Console -->
+        <footer class="app-footer">
+            <div class="console-header">
+                <h3>Compiler Logs & Diagnostics</h3>
+            </div>
+            <div id="console-logs" class="console-logs">
+                <div class="log-line info">BBL Playground Initialized. Ready for compilation.</div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

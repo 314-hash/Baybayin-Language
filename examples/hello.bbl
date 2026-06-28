@@ -1,0 +1,37 @@
+// Halimbawa ng Baybayin Language (BBL)
+// ᜃᜋᜓᜐ᜔ᜆ ᜋᜓᜈ᜔ᜇᜓ (Kamusta Mundo)
+
+kontrata Pagbati {
+    itakda mensahe: teksto = "Kamusta mula sa BBL!"
+    itakda tagapamahala: alamat
+    itakda bilang_ng_pagbabago: buo = 0
+
+    tungkulin simulan(unang_alamat: alamat) {
+        tagapamahala = unang_alamat
+    }
+
+    tungkulin kuninMensahe() ibahagi: teksto {
+        ibalik mensahe
+    }
+
+    tungkulin baguhinMensahe(bagong_mensahe: teksto) ibahagi {
+        kung (mensahe != bagong_mensahe) {
+            mensahe = bagong_mensahe
+            bilang_ng_pagbabago = bilang_ng_pagbabago + 1
+            ipakita("Nabagong mensahe sa: " + bagong_mensahe)
+        }
+    }
+}
+
+// --- Direktang pag-andar ng Script ---
+ipakita("Nagsisimula ang programa...")
+
+// Paggawa ng instance ng kontrata/class
+itakda demo = Pagbati("0x1234567890123456789012345678901234567890")
+
+// Pagtawag sa mga tungkulin (functions)
+itakda kasalukuyang_mensahe: teksto = demo.kuninMensahe()
+ipakita(kasalukuyang_mensahe)
+
+demo.baguhinMensahe("Bagong Mensahe 2026")
+ipakita("Bilang ng pagbabago: " + demo.bilang_ng_pagbabago)

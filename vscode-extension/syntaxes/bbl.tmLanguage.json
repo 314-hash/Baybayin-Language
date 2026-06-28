@@ -1,0 +1,137 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Baybayin Language",
+  "scopeName": "source.bbl",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#builtins"
+    },
+    {
+      "include": "#identifiers"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.bbl",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.bbl",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.bbl",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.bbl",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.bbl",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.bbl",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.float.bbl",
+          "match": "\\b\\d+\\.\\d+\\b"
+        },
+        {
+          "name": "constant.numeric.integer.bbl",
+          "match": "\\b\\d+\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "storage.type.class.bbl",
+          "match": "\\bkontrata\\b"
+        },
+        {
+          "name": "storage.type.function.bbl",
+          "match": "\\btungkulin\\b"
+        },
+        {
+          "name": "storage.type.var.bbl",
+          "match": "\\bitakda\\b"
+        },
+        {
+          "name": "storage.modifier.bbl",
+          "match": "\\bibahagi\\b"
+        },
+        {
+          "name": "keyword.control.flow.bbl",
+          "match": "\\b(kung|kundi|habang|ibalik)\\b"
+        },
+        {
+          "name": "constant.language.boolean.bbl",
+          "match": "\\b(tama|mali)\\b"
+        },
+        {
+          "name": "constant.language.null.bbl",
+          "match": "\\bwala\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "support.type.primitive.bbl",
+          "match": "\\b(buo|teksto|kondisyon|alamat)\\b"
+        }
+      ]
+    },
+    "builtins": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.bbl",
+          "match": "\\bipakita\\b"
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "name": "variable.other.readwrite.bbl",
+          "match": "[a-zA-Z_\\x{1700}-\\x{171F}][a-zA-Z0-9_\\x{1700}-\\x{171F}]*"
+        }
+      ]
+    }
+  }
+}

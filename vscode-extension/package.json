@@ -1,0 +1,36 @@
+{
+  "name": "bbl-lang",
+  "displayName": "Baybayin Language (BBL) Support",
+  "description": "Syntax highlighting and language configuration for the Baybayin Language (BBL)",
+  "version": "0.1.0",
+  "publisher": "bbl-ecosystem",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "bbl",
+        "aliases": [
+          "Baybayin Language",
+          "BBL",
+          "bbl"
+        ],
+        "extensions": [
+          ".bbl"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "bbl",
+        "scopeName": "source.bbl",
+        "path": "./syntaxes/bbl.tmLanguage.json"
+      }
+    ]
+  }
+}

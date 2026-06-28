@@ -1,0 +1,234 @@
+{
+  "entry": "__main__",
+  "main_code": [
+    [
+      "LOAD_CONST",
+      "Nagsisimula ang programa..."
+    ],
+    [
+      "PRINT",
+      1
+    ],
+    [
+      "LOAD_CONST",
+      "0x1234567890123456789012345678901234567890"
+    ],
+    [
+      "LOAD_GLOBAL",
+      "Pagbati"
+    ],
+    [
+      "CALL_FUNCTION",
+      1
+    ],
+    [
+      "STORE_FAST",
+      "demo"
+    ],
+    [
+      "LOAD_FAST",
+      "demo"
+    ],
+    [
+      "CALL_METHOD",
+      [
+        "kuninMensahe",
+        0
+      ]
+    ],
+    [
+      "STORE_FAST",
+      "kasalukuyang_mensahe"
+    ],
+    [
+      "LOAD_FAST",
+      "kasalukuyang_mensahe"
+    ],
+    [
+      "PRINT",
+      1
+    ],
+    [
+      "LOAD_CONST",
+      "Bagong Mensahe 2026"
+    ],
+    [
+      "LOAD_FAST",
+      "demo"
+    ],
+    [
+      "CALL_METHOD",
+      [
+        "baguhinMensahe",
+        1
+      ]
+    ],
+    [
+      "LOAD_CONST",
+      "Bilang ng pagbabago: "
+    ],
+    [
+      "LOAD_FAST",
+      "demo"
+    ],
+    [
+      "LOAD_ATTR",
+      "bilang_ng_pagbabago"
+    ],
+    [
+      "BINARY_ADD",
+      null
+    ],
+    [
+      "PRINT",
+      1
+    ],
+    [
+      "HALT",
+      null
+    ]
+  ],
+  "functions": {},
+  "contracts": {
+    "Pagbati": {
+      "fields": {
+        "mensahe": "Kamusta mula sa BBL!",
+        "tagapamahala": null,
+        "bilang_ng_pagbabago": 0
+      },
+      "methods": {
+        "simulan": {
+          "params": [
+            "unang_alamat"
+          ],
+          "code": [
+            [
+              "LOAD_FAST",
+              "unang_alamat"
+            ],
+            [
+              "LOAD_FAST",
+              "self"
+            ],
+            [
+              "STORE_ATTR",
+              "tagapamahala"
+            ],
+            [
+              "LOAD_CONST",
+              null
+            ],
+            [
+              "RETURN_VALUE",
+              null
+            ]
+          ]
+        },
+        "kuninMensahe": {
+          "params": [],
+          "code": [
+            [
+              "LOAD_FAST",
+              "self"
+            ],
+            [
+              "LOAD_ATTR",
+              "mensahe"
+            ],
+            [
+              "RETURN_VALUE",
+              null
+            ]
+          ]
+        },
+        "baguhinMensahe": {
+          "params": [
+            "bagong_mensahe"
+          ],
+          "code": [
+            [
+              "LOAD_FAST",
+              "self"
+            ],
+            [
+              "LOAD_ATTR",
+              "mensahe"
+            ],
+            [
+              "LOAD_FAST",
+              "bagong_mensahe"
+            ],
+            [
+              "COMPARE_OP",
+              "!="
+            ],
+            [
+              "JUMP_IF_FALSE",
+              18
+            ],
+            [
+              "LOAD_FAST",
+              "bagong_mensahe"
+            ],
+            [
+              "LOAD_FAST",
+              "self"
+            ],
+            [
+              "STORE_ATTR",
+              "mensahe"
+            ],
+            [
+              "LOAD_FAST",
+              "self"
+            ],
+            [
+              "LOAD_ATTR",
+              "bilang_ng_pagbabago"
+            ],
+            [
+              "LOAD_CONST",
+              1
+            ],
+            [
+              "BINARY_ADD",
+              null
+            ],
+            [
+              "LOAD_FAST",
+              "self"
+            ],
+            [
+              "STORE_ATTR",
+              "bilang_ng_pagbabago"
+            ],
+            [
+              "LOAD_CONST",
+              "Nabagong mensahe sa: "
+            ],
+            [
+              "LOAD_FAST",
+              "bagong_mensahe"
+            ],
+            [
+              "BINARY_ADD",
+              null
+            ],
+            [
+              "PRINT",
+              1
+            ],
+            [
+              "LOAD_CONST",
+              null
+            ],
+            [
+              "RETURN_VALUE",
+              null
+            ]
+          ]
+        }
+      }
+    }
+  }
+}
